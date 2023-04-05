@@ -1,0 +1,745 @@
+@mixin mixin-center {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Lato", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  color: #222;
+}
+
+p {
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fjalla One", "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 25px 0px;
+}
+
+h1#front-H1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 28px;
+  margin: 30px 0px;
+}
+
+button,
+input[type="submit"] {
+  width: 220px;
+  height: 80px;
+  background-color: #000;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #a48745;
+  border: none;
+}
+
+#buy-button-area {
+  display: flex;
+  width: 100%;
+  margin: 50px auto;
+  @include mixin-center;
+  #item-qty {
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+    margin-right: 10px;
+    @include mixin-center;
+  }
+}
+
+/* ---------- Header ---------- */
+
+header {
+  overflow: hidden;
+  background: white url(../bilder/bg.jpg) no-repeat center top;
+  background-position: 0px 0px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  #header-cart-qty-number {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 17px;
+    text-align: center;
+  }
+  .logo {
+    margin: 0 auto;
+    img {
+      width: 200px;
+    }
+  }
+}
+
+.menu-icon img,
+.cart-icon img {
+  height: 30px;
+  width: 30px;
+  margin: 30px;
+}
+
+#top-black-bar {
+  background-color: #000;
+  color: #fff;
+  height: 30px;
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  @include mixin-center;
+}
+
+/* ---------- Menu ---------- */
+
+#menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: black;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.2s;
+  text-align: left;
+  a {
+    padding: 10px 40px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  a:hover {
+    color: #666;
+  }
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+  }
+  #cart-icon {
+    width: 60px;
+  }
+  .logo {
+    width: 300px;
+  }
+}
+
+/* ---------- Flytta kanske ---------- */
+
+main {
+  padding: 10px;
+}
+
+.thumb {
+  width: 225px;
+  height: 225px;
+}
+
+.price,
+#product-page-price {
+  font-family: "Fjalla One", "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+  margin: 10px auto;
+}
+
+#product-page-price {
+  font-size: 30px;
+}
+
+.blog-thumb {
+  width: 225px;
+  height: 225px;
+}
+
+/* ---------- Category pages ---------- */
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 0 auto;
+  div {
+    width: 45%;
+    height: 100%;
+    margin: 0px 8px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/* ---------- Slider ---------- */
+
+.slide {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.slider-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+// .slider-container {
+//   width: 350px;
+//   height: 350px;
+//   position: relative;
+//   margin: 0 auto;
+//   .slider-nav {
+//     .prev {
+//       position: absolute;
+//       top: 40%;
+//       left: 10px;
+//       z-index: 1;
+//     }
+//     .next {
+//       position: absolute;
+//       top: 40%;
+//       right: 10px;
+//       z-index: 1;
+//     }
+//     .nav-btn {
+//       background: rgba(255, 255, 255, 0.55);
+//       cursor: pointer;
+//       border-radius: 50%;
+//       width: 30px;
+//       height: 30px;
+//       display: flex;
+//       padding: 5px;
+//       box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+//       @include mixin-center;
+//     }
+//     .nav-btn:hover {
+//       background: white;
+//     }
+//   }
+//   .slider-img-container {
+//     img {
+//       width: 100%;
+//       height: 100%;
+//       max-width: 350px;
+//       max-height: 350px;
+//     }
+//   }
+//   .item {
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     margin-left: auto;
+//     margin-right: auto;
+//     display: none;
+//   }
+//   .showing {
+//     display: block;
+//   }
+// }
+
+/* ---------- Varukorg ---------- */
+
+#varukorg {
+  display: flex;
+  flex-wrap: wrap;
+  @include mixin-center;
+  .sku-pic {
+    width: 20%;
+  }
+  .sku-text {
+    width: 50%;
+    font-size: 16px;
+    margin: 0 auto;
+    @include mixin-center;
+  }
+  .qty-and-btns {
+    width: 20%;
+    font-size: 20px;
+    button {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background-color: #a48745;
+      border: none;
+    }
+  }
+  .sku-total-sum {
+    width: 100%;
+    margin: 0px 0px 50px;
+    font-size: 16px;
+  }
+  #totalt {
+    margin: -20px 0px 40px;
+    font-size: 20px;
+  }
+}
+
+#till-kassan-container {
+  text-align: center;
+}
+
+/* ---------- Reviews ---------- */
+
+#review-area {
+  width: 80%;
+  margin: 0 auto;
+  @include mixin-center;
+  .review {
+    // border: 1px solid #999;
+    margin-bottom: 30px;
+    .name {
+      font-size: 24px;
+    }
+    .rating {
+      color: black;
+    }
+  }
+  h2 {
+    margin: 50px 0px 20px;
+    font-size: 30px;
+  }
+  textarea {
+    width: 100%;
+    height: 200px;
+    margin: 5px auto;
+  }
+  input[type="text"] {
+    width: 100%;
+    margin: 5px auto;
+  }
+  select {
+    width: 100%;
+    margin: 5px auto;
+    height: 35px;
+  }
+  #input-url-hidden {
+    display: none;
+  }
+}
+
+/* ---------- Kassa ---------- */
+
+#varukorg-form {
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 66%;
+  padding: 8px 12px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+#kassa-order-details {
+  text-align: center;
+}
+
+#kassa-hidden-input-totalsum,
+#kassa-hidden-input-items {
+  display: none;
+}
+
+// från kera
+// #kassa-order-details input[type="text"] {
+//   height: initial;
+// }
+
+/* ---------- Footer ---------- */
+
+footer {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  font-size: 12px;
+  margin-top: 50px;
+  background-color: #000;
+  color: #fff;
+  @include mixin-center;
+  a {
+    color: #fff;
+    &:visited {
+      color: #fff;
+    }
+  }
+}
+
+/* ---------- Tack ---------- */
+
+#tack-container {
+  width: 75%;
+  text-align: center;
+  margin: 80px auto 40px;
+}
+
+/* ---------- Backend ---------- */
+
+#backend-top {
+  margin: 40px 0px 80px 250px;
+  width: 88%;
+  #backend-search {
+    height: 50px;
+    border: 3px solid rgb(61, 61, 61);
+    font-size: 20px;
+    margin: 0 auto;
+  }
+  #backend-logout {
+    float: right;
+    margin-top: -40px;
+    margin-right: 100px;
+  }
+  input[type="submit"] {
+    width: 100px;
+    height: 50px;
+    border: 3px solid rgb(61, 61, 61);
+    font-weight: bold;
+    vertical-align: top;
+    font-size: 14px;
+  }
+  input[type="submit"]:hover {
+    background: #a48745;
+  }
+}
+
+.order-row {
+  display: flex;
+  align-items: top;
+  flex-wrap: wrap;
+  flex-direction: row;
+  @include mixin-center;
+  justify-content: space-evenly;
+}
+
+.order-column,
+.order-column-maxwidth {
+  min-height: 145px;
+  font-size: 15px;
+  font-weight: bold;
+  align-items: top;
+}
+
+#order-number-column {
+  margin-right: 20px;
+}
+
+#order-number-column textarea {
+  font-size: 50px;
+  color: #695d2d;
+  font-weight: bold;
+}
+
+.order-input-field,
+.order-input-field-maxwidth {
+  height: 90px;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  resize: none;
+}
+
+.order-input-field-maxwidth {
+  max-width: 90px;
+}
+
+input[type="text"] {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+textarea {
+  font-family: "Lato", "Helvetica Neue", sans-serif;
+  width: 300px;
+  height: 500px;
+}
+
+#hidden {
+  display: none;
+}
+
+.backend-button {
+  width: 240px;
+  height: 45px;
+  background-color: rgb(61, 61, 61);
+  font-size: 14px;
+  font-weight: bold;
+  margin: -10px 4px 50px;
+  padding: 0px;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  &:hover {
+    background-color: rgb(122, 122, 122);
+  }
+}
+
+#pagination-links {
+  margin: 50px;
+}
+
+#pagination-links a {
+  color: white;
+  background-color: rgb(61, 61, 61);
+  text-decoration: none;
+  margin: 5px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#pagination-links a:hover {
+  background: #a48745;
+}
+
+hr.hr {
+  border-top: 2px solid #695d2d;
+  margin: 10px 0px 10px;
+}
+
+#faktura-button {
+  display: flex;
+  background: #695d2d;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  height: 40px;
+  width: 100px;
+  color: #fff;
+  padding: 25px 30px;
+  margin: 0 auto;
+  text-decoration: none;
+  border-radius: 5px;
+  @include mixin-center;
+}
+
+#faktura-button:hover {
+  background: #a48745;
+  cursor: pointer;
+}
+
+/* ---------- Faktura ---------- */
+
+#faktura-container {
+  width: 700px;
+  text-align: left;
+}
+
+#faktura-logo {
+  width: 300px;
+}
+
+#faktura-H1 {
+  font-size: 50px;
+  float: right;
+  color: #000;
+  margin-top: -10px;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.faktura-underline-tr {
+  border-bottom: 3px solid #000;
+  padding-bottom: 10px;
+}
+
+.faktura-produkt-td {
+  width: 50%;
+  padding-top: 20px;
+}
+
+.faktura-totalt-td {
+  width: 50%;
+  text-align: right;
+  align-items: right;
+  align-content: right;
+  vertical-align: text-top;
+  padding-top: 20px;
+}
+
+/* ---------- Desktop ---------- */
+
+@media only screen and (min-width: 1200px) {
+  main {
+    width: 66%;
+    margin: 0 auto;
+  }
+
+  #menu {
+    width: 100%;
+    min-height: 100px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px;
+    background: white url(../bilder/bg.jpg) no-repeat center top;
+  }
+
+  .logo img {
+    width: 240px;
+    margin: 20px 0px;
+    padding: 0px;
+  }
+
+  header {
+    display: none;
+  }
+
+  #desktop-header-cart-qty-number {
+    display: initial;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: -45px;
+    margin-top: -30px;
+  }
+
+  #menu .closebtn {
+    display: none;
+  }
+
+  #menu a {
+    display: initial;
+    font-size: 18px;
+    padding: 0px 10px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    text-shadow: 2px 2px #000;
+    margin-left: -10px;
+    margin-right: 10px;
+  }
+
+  #menu a img {
+    margin-top: 25px;
+  }
+
+  #menu a:hover {
+    color: #695d2d;
+  }
+
+  // Så hackigt och tog så lång tid att komma på...
+  #first-link {
+    margin-left: -30px !important;
+  }
+
+  #menu #cart-icon {
+    width: 30px;
+    margin-left: 40px;
+  }
+
+  #top-black-bar {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  h1#front-H1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  // produkter, kategorier samt framsidan
+  .flex-container div {
+    width: 25%;
+    height: 25%;
+    margin: 0 auto;
+  }
+
+  #desktop-less-width {
+    width: 75%;
+    margin: 0 auto;
+    #varukorg {
+      .sku-text,
+      .sku-total-sum {
+        font-size: 20px;
+      }
+      #totalt {
+        font-weight: bold;
+      }
+    }
+  }
+
+  footer {
+    font-size: 16px;
+    a:visited {
+      color: #fff !important;
+    }
+  }
+}
